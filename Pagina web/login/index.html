@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body style="background: rgb(163, 163, 197);">
+    <div class="row" style="position:absolute;width: 90em;top:6em">
+        <div class="col offset-m4"></div>
+        <div class="col m4 s12">
+            <div class="card">
+                <div class="row">                    
+                    <div class="col s12">
+                        <span class="card-title">Inicio de sesión</span>
+                        <p>
+                            <form onsubmit="login(event)">
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="usuario" type="text" class="validate" required pattern="[a-z]{1-5}">
+                                        <label for="usuario">Usuario</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <input id="contraseña" type="password" class="validate" required>
+                                        <label for="contraseña">Contraseña</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col s12 m4">
+                                        <button type="submit" class="btn primary">Ingresar</button>
+                                    </div>
+                                    <div class="col s12 m8">
+                                        <button class="btn link">Olvide mi contraseña</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script type="text/javascript">
+        function login(event){
+            event.preventDefault();
+            console.log("Iniciando login")
+            let vusuario = document.getElementById("usuario").value;
+            let vcontraseña = document.getElementById("contraseña").value;
+            let datos = {
+                usuario: vusuario,
+                password: vcontraseña
+            }
+            fetch('./../../fake/login.json',{method:'GET', })
+            .then(resp => resp.json())
+            .then(respuesta => {
+                console.log(respuesta)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        }
+    </script>
+</body>
+</html>
