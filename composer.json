@@ -1,0 +1,24 @@
+{
+    "name": "chui/tienda-online",
+    "description": "creacion de una tienda online",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Vidal Chui Jaldin",
+            "email": "crivich@gmail.com"
+        },
+        {
+            "name": "Edson Chui Avendano",
+            "email": "EdSoN19@gmail.com"
+        }
+    ],
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "chui\\":"src/"
+        }
+    }
+}
