@@ -47,9 +47,6 @@ require 'funciones.php';
     
     <div class="container" id="main">
     <div class="input-group">
-  <input class="buscador" type="search" class="form-control rounded" placeholder="que busca en nuestro menu?" aria-label="Search"
-    aria-describedby="search-addon" />
-  <button class="boton" type="button" class="btn btn-outline-primary">Buscar</button>
   
   <style>
     body{

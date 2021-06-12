@@ -47,12 +47,12 @@
                     </div>
                     <div class="panel-body">
                         <p class="text-center">
-                            <img class="rez"src="../assets/imagenes/res.png" alt="" >
+                            <img class="logi"src="../assets/imagenes/logo.png" alt="" >
                             <style>
                             body{
                               background-color: red;
                             }
-                            .rez{
+                            .logi{
                               width: 180px;
                             }
                             </style>
