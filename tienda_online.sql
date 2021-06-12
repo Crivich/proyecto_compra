@@ -135,6 +135,11 @@ CREATE TABLE `usuarios` (
   `estado` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+
+
+INSERT INTO `usuarios` (`id`, `nombre_usuario`,`clave`,`estado`) VALUES
+(1,'Admin', 'ubi123', 1),
+(2,'CristianChui','ubi456', 1);
 --
 -- Índices para tablas volcadas
 --
